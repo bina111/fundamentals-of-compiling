@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>981</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>文法问题处理器</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入文法规则：</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>211</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_save">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>30</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_open">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>30</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_process">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>30</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>处理</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_exit">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>30</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>941</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>化简后的文法</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>821</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>非终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_non1">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_te1">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>50</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始符号：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_start1">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>50</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>消除左递归后的结果</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>120</y>
+        <width>821</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_te3">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_start3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始符号：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>非终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_non3">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>20</y>
+        <width>311</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>消除完左递归后的文法规则如下！！！！</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>消除左公共因子后的结果</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>110</y>
+        <width>821</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_te2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_start2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始符号：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>非终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_non2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>60</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>471</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>消除完左递归后的文法提取左公因子后的文法规则如下！！！！</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>first集合与follow集合</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>160</y>
+        <width>551</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_ff">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>80</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>求first和follow集合</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>30</y>
+        <width>471</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>请先求完first和follow集合再去最左推导！！！！</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_47">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>100</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始符号：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_start5">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>100</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>301</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_49">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>140</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>非终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_50">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>化简后的文法如下：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_te5">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>180</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_non5">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>140</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>最左推导的每一步过程</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>50</y>
+        <width>521</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>请输入句子进行分析：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>推导过程如右表：</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>280</y>
+        <width>301</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>化简后的文法如下：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_ala">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>分析</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始符号：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_start4">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>160</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>非终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_non4">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>200</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终态集合：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_te4">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>240</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>请先求完first和follow集合！！！</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

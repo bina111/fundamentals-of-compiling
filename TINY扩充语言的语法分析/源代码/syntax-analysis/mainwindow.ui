@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TINY扩充语言的语法分析</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTextEdit" name="tE_code">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>451</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入源程序：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_save">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>40</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_open">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="tE_parseTree">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>80</y>
+      <width>411</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>40</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>语法树如下：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_look">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查看语法树</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_run">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>40</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成语法树</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_exit">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,3 @@
+S->cdAd | cdB
+A->ab | a
+B->aba

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入正则表达式：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lE_exp">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_save">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_open">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_change">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>转化</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pB_exit">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tab">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>791</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="NFA">
+     <attribute name="title">
+      <string>NFA</string>
+     </attribute>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>起始状态：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lE_startNFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终止状态：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lE_endNFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>30</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableNFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>751</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DFA">
+     <attribute name="title">
+      <string>DFA</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终止状态：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>起始状态：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lE_startDFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableDFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>741</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="lE_endDFA">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>10</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SmallDFA">
+     <attribute name="title">
+      <string>最小化的DFA</string>
+     </attribute>
+     <widget class="QLineEdit" name="lE_endDFASmall">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>起始状态：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lE_startDFASmall">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>终止状态：</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableDFASmall">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>741</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="code">
+     <attribute name="title">
+      <string>词法分析程序</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>731</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词法分析程序如下：</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
